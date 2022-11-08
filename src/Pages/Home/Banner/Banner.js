@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md text-white">
                     <h1 className="mb-5 text-5xl font-bold">Infinite Snaps</h1>
-                    <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <p className="mb-5 text-lg">Internationally publidhed Photographer who brings exceptional knowledge and enthusiasm to every photo shoot. Committed to delivering promised results.</p>
                     <button className="btn btn-primary btn-sm">Get Started</button>
                 </div>
             </div>
