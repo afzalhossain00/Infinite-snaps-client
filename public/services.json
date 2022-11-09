@@ -1,0 +1,74 @@
+[
+    {
+        "service_id": "01",
+        "title": "Sports Photography",
+        "img": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3BvcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "price": "80.00",
+        "rating": "4.5",
+        "description": "By catching athletes, coaches, and even fans at the perfect moment, sports photographs can depict the passion, drama, and emotion that fuels sporting events. Sports photographers must aim and shoot quickly to keep up with the action around them, and it’s best practice to use a higher ISO to shoot at a faster shutter speed. Sports photographers also usually use long, heavy lenses for zooming in on the action. Interesting angles can help make your work stand out in this competitive genre."
+    },
+    {
+        "service_id": "02",
+        "title": "portrait Photography",
+        "img": "https://dvyvvujm9h0uq.cloudfront.net/com/articles/1525891879-379720-warren-wong-242286-unsplashjpg.jpg",
+        "price": "90.00",
+        "rating": "4.7",
+        "description": "One of the most common photography styles, portrait photography, or portraiture, aims to capture the personality and mood of an individual or group. Images may be candid or posed, full body or close-ups. Either way, the subject’s face and eyes are typically in focus. Lighting and backdrop help to convey tone and emotion. Popular types of photography portraits include senior portraits, family portraits, engagement photos, and professional headshots. The best portrait photographers make clients feel completely comfortable, so that their expressions are natural and relaxed."
+    },
+    {
+        "service_id": "03",
+        "title": "landscape Photography",
+        "img": "https://photographylife.com/wp-content/uploads/2016/06/Mass-960x640.jpg",
+        "price": "140.00",
+        "rating": "4.9",
+        "description": "Landscape photography is another way of saying scenic or environmental photography. It involves taking pictures of a natural scene – often large and grand, but sometimes smaller and more intimate – in a way that brings the viewer into a scene. Landscape photography is one of the most popular types today, spinning off several sub-genres such as storm photography, seascapes, and so on. With a broader definition, it also includes “urban landscape” photography and manmade scenes."
+    },
+    {
+        "service_id": "04",
+        "title": "Wildlife Photography",
+        "img": "https://photographylife.com/wp-content/uploads/2018/02/Puffin-Photo-960x640.jpg",
+        "price": "120.00",
+        "rating": "4.9",
+        "description": "Wildlife photography can bring out some of the most intense photographers you’ll meet – people who might spend hours on end waiting for an animal to wander into the perfect spot, or search for creatures that most people would rather try to avoid. But it’s also something you can practice in your own backyard, or a short drive from where you live, since there are animals to be found everywhere. From time to time, you’ll see a photo series of urban wildlife that rivals the best images captured in more remote locations."
+    },
+    {
+        "service_id": "05",
+        "title": "Aerial Photography ",
+        "img": "https://images.unsplash.com/photo-1612900631807-6e32af134ff7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjA0fHxhZXJpYWwlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+        "price": "90.00",
+        "rating": "4.8",
+        "description": "Whether this is simply a branch of landscape photography or a genre of its own is debatable, but either way, aerial photography is experiencing an explosion in popularity today thanks to the advent of high-quality consumer drones. Aerial photography also encompasses high-altitude images from planes and helicopters, as well as images where the subject is manmade rather than a landscape."
+    },
+    {
+        "service_id": "06",
+        "title": "Still Life Photography",
+        "img": "https://photographylife.com/wp-content/uploads/2012/04/AF-S-VR-Micro-Nikkor-105mm-f2.8G-IF-ED-sample-1.jpg",
+        "price": "80.00",
+        "rating": "4.6",
+        "description": "Another broad style of photography is still life photography, taking pictures in a studio of a manufactured scene in order to look as good as possible. Although still life photography sometimes includes living things such as plants, I’m putting it under the “manmade objects” category because it can include almost anything. Some of the most interesting still life images I’ve seen are of seemingly boring objects like silverware and office supplies. AF-S VR Micro-Nikkor 105mm f2.8G IF-ED sample (1) Nasim Mansurov"
+    },
+    {
+        "service_id": "07",
+        "title": "Pet Photography",
+        "img": "https://photographylife.com/wp-content/uploads/2019/01/Pet-Photography-Genre-Example-960x636.jpg",
+        "price": "60.00",
+        "rating": "4.8",
+        "description": "Pet photography doesn’t fit perfectly under one of this article’s broader categories, but I put it at the end of “people photography” because pets are an important part of many people’s families. And similar skills apply to pet photography as portraiture – understanding light, dealing with fast-paced chaos, and conveying the essence of your subject. Aside from selfies, this might just be the most popular genre of photography today!"
+    },
+    {
+        "service_id": "08",
+        "title": "Astro Photography",
+        "img": "https://photographylife.com/wp-content/uploads/2018/08/Milky-Way-over-Grand-Teton-National-Park-960x640.jpg",
+        "price": "100.00",
+        "rating": "4.6",
+        "description": "Encompassing everything from smartphone images taken through a telescope to deep-space photographs from the Hubble, astrophotography can be one of the most humbling types of photography to practice. It’s humbling for two reasons: First, the size and scale of subjects captured in this style of photography are enough to bring on existential awe in almost anyone. But more to the point, if you don’t have excellent exposure and post-processing techniques, any lack of knowledge will be immediately obvious."
+    },
+    {
+        "service_id": "09",
+        "title": "Underwater Photography",
+        "img": "https://images.unsplash.com/photo-1514907283155-ea5f4094c70c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dW5kZXJ3YXRlciUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "price": "180.00",
+        "rating": "4.6",
+        "description": "It isn’t always easy to take underwater photos, even if you live in the right location for it. Not only do you need a good waterproof camera, but you also need some specific lighting equipment the moment you start taking photos more than a short distance from the surface. Add in scuba gear and the requisite training for longer dives, and you can see why this is one of the trickier genres to start practicing. But if you put in the money and effort, you’ll end up with photos that not nearly as many people are taking today. Underwater photography spans everything from wildlife and macro to portraits that are striking to the eye."
+    }
+]
