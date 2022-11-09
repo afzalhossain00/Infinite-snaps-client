@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/Hooks';
 
 const Login = () => {
     const { logIn, providerLogin } = useContext(AuthContext);
@@ -33,6 +34,7 @@ const Login = () => {
                 console.error(error)
             })
     }
+    useTitle('Login')
     return (
         <div className="hero w-full my-20">
             <div className="hero-content w-4/6">
