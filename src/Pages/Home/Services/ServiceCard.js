@@ -5,7 +5,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceCard = ({ service }) => {
-    const { service_id, img, price, title, description } = service;
+    const { _id, img, price, title, description } = service;
     return (
         <div className="card card-compact w-96 mx-auto bg-base-100 shadow-xl">
 
@@ -26,7 +26,7 @@ const ServiceCard = ({ service }) => {
                     }
                 </p>
                 <div className="card-actions justify-end">
-                    <Link to={`/service/${service_id}`}>
+                    <Link to={`/service/${_id}`}>
                         <button className="btn btn-primary btn-sm text-black-600 font-medium">View Details <FaArrowRight></FaArrowRight></button>
                     </Link>
                 </div>

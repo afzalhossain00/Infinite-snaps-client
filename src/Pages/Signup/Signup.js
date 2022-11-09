@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/Hooks';
 
 const Signup = () => {
     const { createUser } = useContext(AuthContext)
@@ -18,7 +19,7 @@ const Signup = () => {
             })
             .catch(error => console.error(error))
     }
-
+    useTitle('Sign Up')
     return (
         <div className="hero w-full my-20">
             <div className="hero-content w-4/6">
