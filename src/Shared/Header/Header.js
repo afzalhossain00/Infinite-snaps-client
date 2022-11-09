@@ -5,9 +5,12 @@ import logo from '../../../src/assets/logo.png'
 const Header = () => {
 
     const menuItems = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
-        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/' className="text-lg font-semibold">Home</Link></li>
+        <li><Link to='/blog' className="text-lg font-semibold">Blog</Link></li>
+        <li><Link to='/login' className="text-lg font-semibold">Login</Link></li>
+
+
+
     </>
 
     return (
@@ -23,7 +26,7 @@ const Header = () => {
                 </div>
                 <Link className="btn btn-ghost normal-case text-xl">
                     <img className='rounded-lg mr-2' style={{ width: '60px' }} src={logo} alt="" />
-                    <Link style={{ textDecoration: 'none', color: 'black' }} className='fw-bold fs-3' to="/">Infinite snaps</Link>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} className='font-bold text-2xl' to="/">Infinite snaps</Link>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

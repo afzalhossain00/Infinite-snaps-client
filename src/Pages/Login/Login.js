@@ -1,15 +1,37 @@
-import React from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext } from 'react';
+import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
+    const { logIn, providerLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
 
     const handleLogin = event => {
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+
+        logIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset()
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
     return (
         <div className="hero w-full my-20">
@@ -35,8 +57,7 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="rounded-md text-center pb-4 btn-group-vertical lg:btn-group-horizontal">
-                        <button className='btn btn-outline btn-info btn-xs mr-2'><FaGoogle className='mr-2'></FaGoogle>Google</button>
-                        <button className='btn btn-outline btn-info btn-xs'><FaGithub className='mr-2'></FaGithub>Github</button>
+                        <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info btn-xs mr-2'><FaGoogle className='mr-2'></FaGoogle>Google</button>
                     </div>
                     <p className='text-center'>New to Infinite Snaps? <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
 
