@@ -15,7 +15,7 @@ const About = () => {
                         in this field</h1>
                     <p className="py-6 text-lg">Certified Professional Photographer with 5+ years of experience. Skilled in portrait photography, landscape, wedding photography and many more.</p>
                     <p className="py-6 text-lg">Admin at Infinite snaps. Finalist, Sony World Photography Competition 2021.</p>
-                    <button className="btn btn-primary btn-sm">More Info</button>
+                    <button className="btn btn-primary btn-md">More Info</button>
                 </div>
             </div>
         </div>

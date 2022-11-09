@@ -1,12 +1,52 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const ServiceDetails = () => {
-    const { title, img, price, description } = useLoaderData()
+    const { _id, title, img, price, description } = useLoaderData()
+
+
+    const { user } = useContext(AuthContext)
+
+    const handleReview = event => {
+        event.preventDefault()
+        const form = event.target;
+        const name = `${form.name.value}`;
+        const email = user?.email || 'unregisterd';
+        const message = form.message.value;
+
+        const review = {
+            service: _id,
+            serviceName: title,
+            price,
+            customer: name,
+            email,
+            message
+        }
+
+        fetch('http://localhost:5000/userReview', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Added Review successfully')
+                    form.reset()
+                }
+            })
+            .catch(error => console.error(error))
+    }
+
     return (
-        <div>
-            <div className="card card-compact w-9/12 mx-auto bg-base-100 shadow-xl">
+        <div className='mb-8'>
+            <div className="card card-compact w-9/12 mx-auto bg-base-100 shadow-xl pb-8">
 
                 <PhotoProvider>
                     <PhotoView src={img}>
@@ -20,10 +60,22 @@ const ServiceDetails = () => {
                     <p className='text-xl text-orange-600 font-semibold'>Price: ${price}</p>
                     <div className="card-actions justify-end">
                         <Link to='/'>
-                            <button className="btn btn-primary btn-sm text-black-600 font-medium">Home</button>
+                            <button className="btn btn-primary btn-md text-black-600 font-medium">Home</button>
                         </Link>
                     </div>
                 </div>
+            </div>
+
+            <div className="w-9/12 mx-auto mt-28 text-center">
+                <h2 className="text-3xl mb-8 font-semibold">Give Review For: {title}</h2>
+                <form onSubmit={handleReview}>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                        <input name='name' type="text" placeholder="Name" className="input input-bordered input-ghost mb-4 w-full" required />
+                        <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost input-bordered w-full" readOnly />
+                    </div>
+                    <textarea name='message' className="textarea textarea-bordered h-24 mb-4 w-full" placeholder="Your message" required></textarea>
+                    <input name='' className='btn btn-outline btn-info' type="submit" value="Add Review" />
+                </form>
             </div>
         </div>
     );

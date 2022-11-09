@@ -26,8 +26,8 @@ const Home = () => {
                             My Work <br />
                             Process</h1>
                         <p className="py-6 text-lg">Workflows are essential for any project, and the number of steps included in each depends on the complexity of the project.</p>
-                        <p className="py-6 text-lg">Providing goods and services isn’t all my business does; My real mission is to satisfy and delight my customers</p>
-                        <button className="btn btn-primary btn-sm">Start Project</button>
+                        <p className="py-6 text-lg">Providing goods and services isn’t all my business does; My real mission is to satisfy and delight my clients.</p>
+                        <button className="btn btn-primary btn-md">Start Project</button>
                     </div>
                 </div>
             </div>
