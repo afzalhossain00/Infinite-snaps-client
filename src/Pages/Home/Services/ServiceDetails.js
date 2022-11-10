@@ -3,11 +3,11 @@ import toast from 'react-hot-toast';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../Hooks/Hooks';
 
 const ServiceDetails = () => {
+    useTitle('Service Details')
     const { _id, title, img, price, description } = useLoaderData()
-
-
     const { user } = useContext(AuthContext)
 
     const handleReview = event => {
@@ -66,18 +66,28 @@ const ServiceDetails = () => {
                 </div>
             </div>
 
-            <div className="w-9/12 mx-auto mt-28 text-center">
-                <h2 className="text-3xl mb-8 font-semibold">Give Review For: {title}</h2>
-                <form onSubmit={handleReview}>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                        <input name='name' type="text" placeholder="Name" className="input input-bordered input-ghost mb-4 w-full" required />
-                        <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost input-bordered w-full" readOnly />
+            {
+                user ?
+                    <div div className="w-9/12 mx-auto mt-28 text-center">
+                        <h2 className="text-3xl mb-8 font-semibold">Give Review For: {title}</h2>
+                        <form onSubmit={handleReview}>
+                            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                                <input name='name' type="text" placeholder="Name" className="input input-bordered input-ghost mb-4 w-full" required />
+                                <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost input-bordered w-full" readOnly />
+                            </div>
+                            <textarea name='message' className="textarea textarea-bordered h-24 mb-4 w-full" placeholder="Your message" required></textarea>
+                            <input name='' className='btn btn-outline btn-info' type="submit" value="Add Review" />
+                        </form>
                     </div>
-                    <textarea name='message' className="textarea textarea-bordered h-24 mb-4 w-full" placeholder="Your message" required></textarea>
-                    <input name='' className='btn btn-outline btn-info' type="submit" value="Add Review" />
-                </form>
-            </div>
-        </div>
+                    :
+                    <div className='text-center text-2xl mt-8'>
+                        Please <Link to='/login'>
+                            <button className='btn btn-info btn-sm mr-2 btn-outline'>login</button>
+                        </Link>
+                        to add review.
+                    </div>
+            }
+        </div >
     );
 };
 

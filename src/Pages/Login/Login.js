@@ -7,9 +7,9 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/Hooks';
 
 const Login = () => {
+    useTitle('Login')
     const { logIn, providerLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider()
-
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -43,7 +43,6 @@ const Login = () => {
                 console.error(error)
             })
     }
-    useTitle('Login')
     return (
         <div className="hero w-full my-20">
             <div className="hero-content w-4/6">
@@ -61,7 +60,6 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" name='password' placeholder="Your password" className="input input-bordered" required />
-
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
