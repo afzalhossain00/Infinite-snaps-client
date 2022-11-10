@@ -9,7 +9,7 @@ const MyReviews = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userReview?email=${user?.email}`)
+        fetch(`https://infinite-snaps-server.vercel.app/userReview?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
@@ -17,7 +17,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this review.')
         if (proceed) {
-            fetch(`http://localhost:5000/userReview/${id}`, {
+            fetch(`https://infinite-snaps-server.vercel.app/userReview/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -33,7 +33,7 @@ const MyReviews = () => {
     }
 
     const handleReviewUpdate = id => {
-        fetch(`http://localhost:5000/userReview/${id}`, {
+        fetch(`https://infinite-snaps-server.vercel.app/userReview/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

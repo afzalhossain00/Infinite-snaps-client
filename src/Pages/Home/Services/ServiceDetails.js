@@ -26,7 +26,7 @@ const ServiceDetails = () => {
             message
         }
 
-        fetch('http://localhost:5000/userReview', {
+        fetch('https://infinite-snaps-server.vercel.app/userReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
