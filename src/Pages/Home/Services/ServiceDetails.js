@@ -4,6 +4,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../Hooks/Hooks';
+import ReviewDisplay from './ReviewDisplay';
 
 const ServiceDetails = () => {
     useTitle('Service Details')
@@ -65,6 +66,8 @@ const ServiceDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <ReviewDisplay></ReviewDisplay>
 
             {
                 user ?
