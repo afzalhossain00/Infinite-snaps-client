@@ -1,5 +1,6 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
@@ -28,6 +29,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                toast.success('Successfully login.')
                 form.reset()
             })
             .catch(error => {

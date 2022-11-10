@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/Hooks';
@@ -15,6 +16,7 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                toast.success('Successfully created user.')
                 form.reset()
             })
             .catch(error => console.error(error))
