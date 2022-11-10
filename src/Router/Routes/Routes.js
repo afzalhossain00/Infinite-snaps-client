@@ -8,6 +8,7 @@ import Signup from "../../Pages/Signup/Signup";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import AddService from "../../Pages/MyReviews/AddService";
+import TotalServices from "../../Pages/Home/Services/TotalServices";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
                 path: '/service/:id',
                 element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`https://infinite-snaps-server.vercel.app/service/${params.id}`)
+            },
+            {
+                path: '/all-services',
+                element: <TotalServices></TotalServices>,
+                loader: () => fetch('https://infinite-snaps-server.vercel.app/all-services')
             },
             {
                 path: '/userReview',

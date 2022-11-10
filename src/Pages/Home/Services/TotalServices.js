@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
-const ServiceDetails = () => {
-    const [services, setServices] = useState([]);
-    useEffect(() => {
-        fetch('https://infinite-snaps-server.vercel.app/services')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
-
+const TotalServices = () => {
+    const services = useLoaderData()
     return (
         <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-3 mb-6'>
             {
@@ -21,4 +15,4 @@ const ServiceDetails = () => {
     );
 };
 
-export default ServiceDetails;
+export default TotalServices;
