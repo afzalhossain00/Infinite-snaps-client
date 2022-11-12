@@ -13,19 +13,17 @@ const AddService = () => {
         event.preventDefault();
         const form = event.target;
         const title = form.title.value;
-        const image = form.image.value
+        const img = form.image.value
         const email = user?.email || 'unregistered';
         const price = form.price.value;
-        const details = form.details.value;
-        const photoURL = user.photoURL;
+        const description = form.details.value;
 
         const review = {
             email,
             title,
-            image,
+            img,
             price,
-            photoURL,
-            details,
+            description,
         }
         fetch(' https://infinite-snaps-server.vercel.app/all-services', {
             method: 'POST',

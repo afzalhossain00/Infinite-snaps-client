@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../Hooks/Hooks';
 import ReviewDisplay from './ReviewDisplay';
@@ -10,6 +10,7 @@ const ServiceDetails = () => {
     useTitle('Service Details')
     const { _id, title, img, price, description } = useLoaderData()
     const { user } = useContext(AuthContext)
+    const location = useLocation();
 
     const handleReview = event => {
         event.preventDefault()
@@ -84,7 +85,7 @@ const ServiceDetails = () => {
                     </div>
                     :
                     <div className='text-center text-2xl mt-8'>
-                        Please <Link to='/login'>
+                        Please <Link to='/login' state={{ from: location }} replace>
                             <button className='btn btn-info btn-sm mr-2 btn-outline'>login</button>
                         </Link>
                         to add review.
